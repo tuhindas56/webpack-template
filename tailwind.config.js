@@ -1,8 +1,9 @@
+/* eslint-disable */
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+export default {
+  content: ['./src/index.html', './src/**/*.ts'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

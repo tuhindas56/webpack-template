@@ -4,7 +4,7 @@
 
 ## Setup
 
-- Install dependencies: `npm i && npm i -D concurrently@8.2.2`
-- Start server: `npm start`
+- Install dependencies: `npm i` 
+- Start dev server: `npm start`
+- Build project: npm run build
 
-**Note**: `npm start` starts the development server and watches for changes, automatically bundling the source files to the `./dist` folder. If you only want to build the project without starting the development server, use `npm run build`.

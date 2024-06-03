@@ -1,1 +1,0 @@
-npm init -y && npm i -D webpack webpack-cli webpack-dev-server webpack-merge html-webpack-plugin html-loader style-loader css-loader ts-loader postcss-loader postcss autoprefixer tailwindcss typescript && rm ./install.sh
