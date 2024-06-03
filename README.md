@@ -4,7 +4,6 @@
 
 ## Setup
 
-- Install dependencies: `npm i` 
+- Install dependencies: `npm i`
 - Start dev server: `npm start`
-- Build project: npm run build
-
+- Build project: `npm run build`
