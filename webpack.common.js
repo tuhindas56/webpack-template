@@ -14,7 +14,14 @@ module.exports = {
         test: /\.ts$/i,
         include: path.resolve(__dirname, 'src/ts'),
         exclude: /node_modules/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|svg|gif)$/i,
@@ -43,7 +50,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name]-[contenthash].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
