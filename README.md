@@ -24,13 +24,7 @@
      - 'postcss-loader'
      + 'sass-loader'
      ```
-
-  3. Update **src/ts/main.ts**:
-     ```
-     - import '../style.css'
-     + import '../styles.scss'
-     ```
-  4. Update **.prettierrc**:
+  3. Update **.prettierrc**:
 
      ```
      - "plugins": ["prettier-plugin-tailwindcss"]
