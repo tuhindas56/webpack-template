@@ -14,7 +14,7 @@
 To remove TailwindCSS and setup Sass, run:
 
 ```
-npm remove tailwindcss @tailwindcss/forms prettier-plugin-tailwindcss && rm src/style.css src/ts/main.ts tailwind.config.js && npm i -D sass sass-loader && mkdir src/scss && echo "@use 'reset';" > src/scss/main.scss && echo "*, *::before, *::after {box-sizing: border-box;}* {margin: 0;}body {line-height: 1.5;-webkit-font-smoothing: antialiased;}img, picture, video, canvas, svg {display: block;max-width: 100%;}input, button, textarea, select {font: inherit;}p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}#root, #__next {isolation: isolate;}" > src/scss/_reset.scss && echo "import '../scss/main.scss'" > src/ts/main.ts
+npm remove tailwindcss @tailwindcss/forms prettier-plugin-tailwindcss && rm src/style.css src/ts/main.ts tailwind.config.js && npm i -D sass sass-loader && mkdir src/scss && echo "@use 'base';" > src/scss/main.scss && echo "*, *::before, *::after {box-sizing: border-box;}* {margin: 0;}body {line-height: 1.5;-webkit-font-smoothing: antialiased;min-height: 100vh;}img, picture, video, canvas, svg {display: block;max-width: 100%;}input, button, textarea, select {font: inherit;}p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}#root, #__next {isolation: isolate;}" > src/scss/_base.scss && echo "import '../scss/main.scss'" > src/ts/main.ts
 ```
 
 Update **webpack.common.js**:
