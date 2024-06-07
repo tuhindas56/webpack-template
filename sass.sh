@@ -2,8 +2,10 @@
 echo "Removing TailwindCSS and relevant packages and files.."
 npm remove tailwindcss @tailwindcss/forms prettier-plugin-tailwindcss
 rm src/style.css src/ts/main.ts tailwind.config.js
+clear
 echo "Installing Sass.."
 npm i -D sass sass-loader
+clear
 echo "Creating src/scss folder.."
 mkdir src/scss
 echo "Adding basic CSS Reset and base styles.."
@@ -27,5 +29,6 @@ echo "Finishing up.."
 npx prettier .prettierrc --write
 npx prettier postcss.config.js --write
 npx prettier webpack.common.js --write
+clear
 echo "Project setup successful!"
 rm sass.sh
