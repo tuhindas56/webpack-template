@@ -42,3 +42,4 @@ npx prettier webpack.prod.js --write
 clear
 echo "Project setup successful!"
 rm sass.sh
+rm removeTailwind.sh
