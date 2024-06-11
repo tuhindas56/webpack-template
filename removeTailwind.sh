@@ -12,5 +12,6 @@ rm sass.sh
 rm removeTailwind.sh
 npx prettier .prettierrc --write
 npx prettier postcss.config.js --write
+npx prettier src/style.css --write
 clear
 echo "Done!"
