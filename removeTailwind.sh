@@ -12,6 +12,5 @@ rm sass.sh
 rm removeTailwind.sh
 npx prettier .prettierrc --write
 npx prettier postcss.config.js --write
-npx prettier webpack.common.js --write
 clear
 echo "Done!"
