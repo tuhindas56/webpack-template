@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-npm remove tailwindcss @tailwindcss/forms prettier-plugin-tailwindcss autoprefixer
+npm remove tailwindcss @tailwindcss/forms prettier-plugin-tailwindcss
 clear
 rm src/style.css src/ts/main.ts tailwind.config.js postcss.config.js
 touch src/style.css src/ts/main.ts
@@ -8,6 +8,7 @@ echo "import '../style.css'" > src/ts/main.ts
 sed '5d' .prettierrc > temp
 rm .prettierrc
 cat temp > .prettierrc && rm temp
+echo "module.exports = { plugins: [require('autoprefixer')] }" > postcss.config.js
 rm sass.sh
 rm removeTailwind.sh
 npx prettier .prettierrc --write
