@@ -13,7 +13,7 @@ echo "module.exports = { plugins: [require('autoprefixer'), require('cssnano')({
 rm sass.sh
 rm removeTailwind.sh
 npx prettier .prettierrc --write
-npx prettier postcss.config.js --write
+npx prettier postcss.config.cjs --write
 npx prettier src/style.css --write
 clear
 echo "Done!"
