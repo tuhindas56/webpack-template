@@ -16,10 +16,4 @@
   ./removeTailwind.sh
   ```
 
-- To setup Sass, navigate to the repository folder and run `sass.sh` in your terminal:
-
-  ```
-  ./sass.sh
-  ```
-
 - Allow read and write permissions for GitHub Actions to work!
