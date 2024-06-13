@@ -10,7 +10,6 @@ sed '5d' .prettierrc > temp
 rm .prettierrc
 cat temp > .prettierrc && rm temp
 echo "module.exports = { plugins: [require('autoprefixer'), require('cssnano')({ preset: 'default', }),] }" > postcss.config.cjs
-rm sass.sh
 rm removeTailwind.sh
 npx prettier .prettierrc --write
 npx prettier postcss.config.cjs --write
