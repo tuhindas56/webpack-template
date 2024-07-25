@@ -7,6 +7,7 @@
 - Install dependencies: `npm i`
 - Start dev server: `npm start`
 - Build project: `npm run build`
+- Test project: `npm test`
 
 ## Notes
 
