@@ -3,7 +3,9 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 const ESLintPlugin = require("eslint-webpack-plugin")
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/ts/main.ts"),
+  entry: {
+    main: path.resolve(__dirname, "src/ts/main.ts"),
+  },
   module: {
     rules: [
       {
@@ -11,7 +13,7 @@ module.exports = {
         use: ["html-loader"],
       },
       {
-        test: /\.ts$/i,
+        test: /\.[jt]sx?$/i,
         include: path.resolve(__dirname, "src/ts"),
         exclude: /node_modules/,
         use: [
@@ -36,12 +38,14 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".js", ".tsx", ".jsx"],
   },
   plugins: [
     new HTMLWebpackPlugin({
+      filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
       favicon: path.resolve(__dirname, "public/favicon.jpeg"),
+      chunks: ["main"],
     }),
     new ESLintPlugin({
       context: path.resolve(__dirname, "src/ts"),
